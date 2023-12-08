@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+#ENTER TITLE:
+#-----------------------------
+{% block title %}
+Make a Madlib!
+{% endblock %}
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#ENTER CONTENT:
+#--------------------------------
+
+{% block content %} 
+<h1>Make a Madlib!</h1>
+<form action="/story">
+    <!-- <p>{{prompts}}</p> -->
+    {% for word in prompts%}
+    <label for="{{word}}">{{word.capitalize()}}</label>
+    <input id="{{word}}" type="text" name="{{word}}" placeholder="Enter {{word}}"></input><br>
+    {% endfor %}
+    <button type="submit">Create!</button>
+</form>
+
+{% endblock %}

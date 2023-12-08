@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+#ENTER TITLE:
+#-----------------------------
+{% block title %}
+Your Madlib Story
+{% endblock %}
+
+
+
+
+#ENTER CONTENT:
+#--------------------------------
+
+{% block content %} 
+<div id="story-box"><p>{{story.generate(ans)}}</p></div>
+
+
+{% endblock %}
